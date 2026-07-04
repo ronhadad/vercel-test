@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Assistant, Frank_Ruhl_Libre } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const assistant = Assistant({
+  variable: "--font-assistant",
+  subsets: ["hebrew", "latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const frankRuhlLibre = Frank_Ruhl_Libre({
+  variable: "--font-frank-ruhl",
+  subsets: ["hebrew", "latin"],
+  weight: ["400", "500", "700", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "יוון לישראלים",
-  description: "מדריך הטיולים ליוון בשבילכם - אתונה, רודוס ועוד יעדים בקרוב",
+  title: "אֶלָּדָה",
+  description: "אלדה נסיעות - הסוכנות שלכם למסע ביוון: אתונה, סנטוריני, מיקונוס ורודוס",
 };
 
 export default function RootLayout({
@@ -26,9 +29,13 @@ export default function RootLayout({
     <html
       lang="he"
       dir="rtl"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${assistant.variable} ${frankRuhlLibre.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        <div className="flex-1">{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }
