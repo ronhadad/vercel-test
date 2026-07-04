@@ -17,8 +17,8 @@ export default function Home() {
       <p className="text-gray-500">Response from API route:</p>
       {data ? (
         <div className="rounded-lg bg-gray-100 p-6 text-center">
-          <p className="text-lg font-medium">{data.message}</p>
-          <p className="mt-2 text-sm text-gray-400">{data.timestamp}</p>
+          <p className="text-lg font-medium text-gray-900">{data.message}</p>
+          <p className="mt-2 text-sm text-gray-500">{data.timestamp}</p>
         </div>
       ) : (
         <p className="text-gray-400">Loading...</p>
