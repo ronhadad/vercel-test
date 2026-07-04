@@ -38,7 +38,7 @@ export default async function CommentsPage() {
 
       <ul className="w-full max-w-md space-y-2">
         {comments.map((c) => (
-          <li key={c.id} className="rounded-lg bg-gray-100 p-4">
+          <li key={c.id} className="rounded-lg bg-gray-100 p-4 text-gray-900">
             {c.comment}
           </li>
         ))}
