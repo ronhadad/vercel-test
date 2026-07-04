@@ -6,6 +6,7 @@ export type Destination = {
   intro: string;
   highlights: { title: string; description: string }[];
   tips: string[];
+  tripLink?: { href: string; label: string };
 };
 
 export const destinations: Destination[] = [
@@ -78,6 +79,7 @@ export const destinations: Destination[] = [
       "העיר העתיקה הכי יפה בשעות הערב, כשההמונים מתפזרים.",
       "חופי פאראדייס ואנטוני קוויני מומלצים למי שמחפש מים כחולים וצלולים.",
     ],
+    tripLink: { href: "/rhodes-trip", label: "לתוכנית הטיול המלאה שלנו ←" },
   },
 ];
 

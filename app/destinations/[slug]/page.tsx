@@ -59,6 +59,15 @@ export default async function DestinationPage({
         </ul>
       </section>
 
+      {destination.tripLink && (
+        <Link
+          href={destination.tripLink.href}
+          className="rounded-full bg-blue-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-blue-800"
+        >
+          {destination.tripLink.label}
+        </Link>
+      )}
+
       <Link href="/" className="text-sm font-medium text-blue-600">
         → חזרה לכל היעדים
       </Link>
